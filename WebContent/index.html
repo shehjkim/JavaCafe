@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index.html</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(function() {
+		$.ajax({
+			url : 'getEmpList', // /index.html /getEmpList 같은경로
+			type : 'get',
+			dataType : 'json',
+			success : function(result) {
+				//console.log(result);
+				let data = result;
+				let firstNames = $(data).map(function(i, o) {
+					return o.firstName;
+				}).get();
+				
+				let grepNames = $.grep(firstNames, function(o, i){
+					return o.length > 5;			//이름길이(문자열)가 5글자 이상
+				},false);							//true 이면 5글자 이하, false 이면 5글자 이상만 출력
+				console.log(grepNames);
+			},
+			
+			
+			error : function(result) {
+				console.log(result)
+			}
+		});
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>
