@@ -23,6 +23,7 @@ public class GetProdListServlet extends HttpServlet {
 		// Json 파일 생성.{"item_no" : "bean001", "item" : "콜롬비아 원두 커피" ~ }
 		response.setCharacterEncoding("utf-8"); //한글깨짐 해결
 		response.setContentType("text/html charset=uft-8");
+		
 		ProductDAO dao = new ProductDAO();
 		List<ProductVO> list = dao.getProductList();
 		String json = "[";
