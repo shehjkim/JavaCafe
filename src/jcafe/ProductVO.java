@@ -10,8 +10,6 @@ public class ProductVO {
 	private int likeIt;
 	private String alt;
 	private String image;
-	
-	
 	public String getItemNo() {
 		return itemNo;
 	}
@@ -66,7 +64,11 @@ public class ProductVO {
 	public void setImage(String image) {
 		this.image = image;
 	}
+	@Override
+	public String toString() {
+		return "ProductVO [itemNo=" + itemNo + ", item=" + item + ", category=" + category + ", price=" + price
+				+ ", link=" + link + ", content=" + content + ", likeIt=" + likeIt + ", alt=" + alt + ", image=" + image
+				+ "]";
+	}
 
-	
-	
 }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jcafe/product.html</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script> 
+	//1. 전송처리
+	
+	//2.파일첨부
+	function file_open(){
+		window.open('upload.jsp', 'upload', 'width=300 height=200 left=300 top30');
+	}	
+	</script>
+
+
+
+</head>
+<body>
+	<form action="../postProduct" id='frm' method='post'>
+		<table border='1'>
+			<tr>
+				<td>Item NO</td>
+				<td><input type='text' list='itemNolist' name='itemNo'></td>
+				<datalist id='itemNolist'>
+					<option value="bean">빈</option>
+					<option value="setMenu">세트메뉴</option>
+					<option value="Dessert">디저트</option>
+					<option value="bean">빈</option>
+			</tr>
+			<tr>
+				<td>Item</td>
+				<td><input type='text' name='item'></td>
+			</tr>
+			<tr>
+				<td>Category</td>
+				<td><input type='text' name='category'></td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td><input type='text' name='price'></td>
+			</tr>
+			<tr>
+				<td>Link</td>
+				<td><input type='text' name='link' value='item.jsp'></td>
+			</tr>
+			<tr>
+				<td>Content</td>
+				<td><input type='text' name='content'></td>
+			</tr>
+			<tr>
+				<td>LikeIt</td>
+				<td><input type='text' name='likeIt' ></td>
+			</tr>
+			<tr>
+				<td>Alt</td>
+				<td><input type='text' name='alt' value='bean'></td>
+			</tr>
+			<tr>
+				<td>Image</td>
+				<td><input type='text' name='image'>
+				<input type='button' value='파일첨부' onclick='file_open()'></td>
+			</tr>
+			<tr>
+			<td colspan='2'>
+				<button id='save'>저장</button>
+				<button>취소</button></td>
+			</tr>
+		</table>
+
+
+	</form>
+
+
+
+</body>
+</html>

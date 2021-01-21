@@ -19,7 +19,7 @@
 		xhtp.open('get', '../../getSchedule', true); //true 비동기방식 
 		xhtp.send();
 		xhtp.onload = function() {
-			let obj = JSON.parse(xhtp.response);
+			let obj = JSON.parse(xhtp.response);u
 			console.log(obj);
 
 			var calendarEl = document.getElementById('calendar');

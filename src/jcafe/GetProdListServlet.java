@@ -21,8 +21,9 @@ public class GetProdListServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// Json 파일 생성.{"item_no" : "bean001", "item" : "콜롬비아 원두 커피" ~ }
-		response.setCharacterEncoding("utf-8"); //한글깨짐 해결
-		response.setContentType("text/html charset=uft-8");
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
+		response.setContentType("text/html; charset=UTF-8");
 		
 		ProductDAO dao = new ProductDAO();
 		List<ProductVO> list = dao.getProductList();
